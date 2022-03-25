@@ -23,3 +23,13 @@ body {
 #logo-lg {
   margin: 5rem auto;
 }
+
+@media (max-width: 500px) {
+  .logo-box p {
+    font-size: 1rem;
+  }
+
+  #logo-lg {
+    height: 5rem;
+  }
+}
