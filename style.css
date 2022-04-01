@@ -302,10 +302,16 @@ nav {
   width: 45%;
   text-transform: uppercase;
   transition: 0.3s all ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
 }
 
 .btn:active {
   background-color: var(--primary-color);
+  transform: translateY(0);
   color: #222;
 }
 
@@ -380,7 +386,15 @@ nav {
     font-size: 18px;
   }
 
+  .banner-line_1 {
+    font-size: 3rem;
+  }
+  .banner-line_2 {
+    font-size: 2.5rem;
+    letter-spacing: 7px;
+  }
+
   .logo {
-    height: 80px;
+    height: 100px;
   }
 }
