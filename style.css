@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
 :root {
   --primary-color: #6fcae4;
 }
@@ -12,7 +5,6 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -27,18 +19,13 @@ body {
 
 /* HEADER AND NAV  */
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .logo {
-  height: 30px;
+  height: 40px;
 }
 
 .logo-box {
@@ -47,10 +34,7 @@ nav {
   left: 20px;
 }
 .nav-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 50%;
   list-style: none;
@@ -80,8 +64,6 @@ nav {
   height: 3px;
   background-color: var(--primary-color);
   margin: 5px;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -106,27 +88,13 @@ nav {
     top: -40px;
     padding: 10rem 0;
     background: #6fcbe4ea;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
     transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.5s ease-in;
-    transition: -webkit-transform 0.5s ease-in;
-    -o-transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
-    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
   }
 
   .nav-links a {
@@ -145,40 +113,21 @@ nav {
 }
 
 .nav-active {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
   transform: translateX(0%);
-}
-
-@-webkit-keyframes navLinkFade {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: 0px;
-    transform: 0px;
-  }
 }
 
 @keyframes navLinkFade {
   from {
     opacity: 0;
-    -webkit-transform: translateX(50px);
     transform: translateX(50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: 0px;
     transform: 0px;
   }
 }
 
 .toggle .line1 {
-  -webkit-transform: rotate(-405deg) translate(-5px, 6px);
-  -ms-transform: rotate(-405deg) translate(-5px, 6px);
   transform: rotate(-405deg) translate(-5px, 6px);
   background-color: #222;
 }
@@ -188,15 +137,13 @@ nav {
 }
 
 .toggle .line3 {
-  -webkit-transform: rotate(405deg) translate(-5px, -6px);
-  -ms-transform: rotate(405deg) translate(-5px, -6px);
   transform: rotate(405deg) translate(-5px, -6px);
   background-color: #222;
 }
 /* Banner Section  */
 
 .banner-container {
-  margin-top: 13rem;
+  margin-top: 15rem;
   height: 70vh;
   text-align: center;
 }
@@ -207,7 +154,8 @@ nav {
 }
 
 .banner-line_2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  letter-spacing: 3px;
   color: var(--primary-color);
   text-transform: uppercase;
 }
@@ -221,8 +169,6 @@ nav {
 
 .about-container h1 {
   margin: auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -255,8 +201,6 @@ nav {
 .experience-container h1 {
   margin: auto;
   color: var(--primary-color);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   text-transform: uppercase;
   border-bottom: #fff solid;
@@ -273,14 +217,8 @@ nav {
 }
 
 .course-list-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
   color: #fff;
   font-size: 1.2rem;
@@ -305,12 +243,7 @@ nav {
 }
 
 .form-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -318,8 +251,6 @@ nav {
   margin: auto;
   color: #fff;
   border-bottom: var(--primary-color) solid;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 3rem;
   text-transform: uppercase;
@@ -356,15 +287,8 @@ nav {
 }
 
 .button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
 
@@ -377,36 +301,23 @@ nav {
   color: var(--primary-color);
   width: 45%;
   text-transform: uppercase;
-  -webkit-transition: 0.3s all ease;
-  -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
   cursor: pointer;
 }
 
 .btn:hover {
-  -webkit-transform: translateY(-5px);
-  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
 }
 
 .btn:active {
   background-color: var(--primary-color);
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
   transform: translateY(0);
   color: #222;
 }
 
 .links-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   max-width: 30rem;
   margin: auto;
@@ -415,14 +326,10 @@ nav {
 .fa-brands {
   font-size: 2rem;
   color: var(--primary-color);
-  -webkit-transition: 0.2s all ease;
-  -o-transition: 0.2s all ease;
   transition: 0.2s all ease;
 }
 
 .fa-brands:hover {
-  -webkit-transform: translateY(-5px);
-  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
 }
 
@@ -448,7 +355,6 @@ nav {
   }
 
   .contact-form {
-    -webkit-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
   }
@@ -462,8 +368,6 @@ nav {
   .logo-box {
     position: absolute;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     top: 30%;
   }
