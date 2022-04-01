@@ -16,50 +16,27 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-
-    <script src="main.js" defer></script>
   </head>
   <body>
-    <header class="primary-header flex">
-      <div>
-        <img src="img/awd-logo-4.png" height="50" class="logo" alt="Logo" />
-      </div>
-
-      <button
-        class="mobile-nav-toggle"
-        aria-controls="primary-nav"
-        aria-expanded="false"
-      >
-        <span class="sr-only"></span>
-      </button>
-
+    <header>
       <nav>
-        <ul id="primary-nav" data-visible="false" class="primary-nav flex">
-          <li class="active">
-            <a href="index.html">
-              <!-- <span aria-hidden="true">00</span> -->
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about">
-              <!-- <span aria-hidden="true">01</span> -->
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#experience">
-              <!-- <span aria-hidden="true">02</span> -->
-              Experience
-            </a>
-          </li>
-          <li>
-            <a href="#contact">
-              <!-- <span aria-hidden="true">03</span> -->
-              Contact
-            </a>
-          </li>
+        <div class="logo-box">
+          <img class="logo" src="./awd-logo-4.png" alt="Shop logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#index.html">Home</a></li>
+          <span class="pipe"> | </span>
+          <li><a href="#about-homepage">About</a></li>
+          <span class="pipe"> | </span>
+          <li><a href="#experience">Experience</a></li>
+          <span class="pipe"> | </span>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
       </nav>
     </header>
 
@@ -99,6 +76,7 @@
         <div class="course-list-container">
           <div class="course-list course-list-1">
             <ul>
+              <li>JavaScript</li>
               <li>React</li>
               <li>Python</li>
               <li>PHP</li>
@@ -108,6 +86,7 @@
 
           <div class="course-list course-list-2">
             <ul>
+              <li>Scss</li>
               <li>Linux</li>
               <li>ASP.NET</li>
               <li>C#</li>
@@ -185,5 +164,6 @@
         </p>
       </div>
     </footer>
+    <script src="main.js" defer></script>
   </body>
 </html>
