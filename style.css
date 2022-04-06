@@ -2,146 +2,80 @@
   --primary-color: #6fcae4;
 }
 
+html {
+  background-color: #222;
+  font-family: "Oswald", sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html {
+header {
   background-color: #222;
-  font-family: "Oswald", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-/* HEADER AND NAV  */
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.logo {
-  height: 40px;
-}
-
-.logo-box {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
+li {
   list-style: none;
-  margin-top: 5vh;
 }
 
-.nav-links a {
+a {
+  color: #fff;
   text-decoration: none;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  margin-right: 50px;
+}
+
+.nav-branding {
+  margin-top: 15px;
+}
+
+#logo {
+  width: 200px;
+}
+
+.nav-link {
+  transition: 0.7s ease;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 14px;
-  color: var(--primary-color);
+  font-size: 1.2rem;
 }
 
-.pipe {
-  color: var(--primary-color);
+.nav-link:hover {
+  color: dodgerblue;
 }
 
-.burger {
+.hamburger {
   display: none;
   cursor: pointer;
 }
 
-.burger div {
+.bar {
+  display: block;
   width: 25px;
   height: 3px;
-  background-color: var(--primary-color);
-  margin: 5px;
-  transition: all 0.5s ease;
+  margin: 5px auto;
+  -webkit-transistion: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #fff;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  nav {
-    position: relative;
-  }
-
-  .burger {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 110vh;
-    top: -40px;
-    padding: 10rem 0;
-    background: #6fcbe4ea;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
-
-  .nav-links a {
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #222;
-  }
-
-  .pipe {
-    display: none;
-  }
-
-  .burger {
-    display: block;
-  }
-}
-
-.nav-active {
-  transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: 0px;
-  }
-}
-
-.toggle .line1 {
-  transform: rotate(-405deg) translate(-5px, 6px);
-  background-color: #222;
-}
-
-.toggle .line2 {
-  opacity: 0;
-}
-
-.toggle .line3 {
-  transform: rotate(405deg) translate(-5px, -6px);
-  background-color: #222;
-}
-/* Banner Section  */
-
+/* ******************** */
 .banner-container {
   margin-top: 15rem;
   height: 70vh;
@@ -149,12 +83,12 @@ nav {
 }
 
 .banner-line_1 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #fff;
 }
 
 .banner-line_2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   letter-spacing: 3px;
   color: var(--primary-color);
   text-transform: uppercase;
@@ -164,7 +98,6 @@ nav {
 .about-container {
   background-color: #fff;
   padding: 2rem 1rem;
-  /* box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.267); */
 }
 
 .about-container h1 {
@@ -214,6 +147,7 @@ nav {
 .experience-content {
   margin: auto;
   max-width: 50rem;
+  font-size: 1.2rem;
 }
 
 .course-list-container {
@@ -233,13 +167,16 @@ nav {
 /* Contact section  */
 .contact-container {
   background-color: #fff;
+  padding: 2rem;
 }
 
 .contact-form {
   background: #222;
   max-width: 30rem;
   margin: auto;
+  border-radius: 5px;
   padding: 1rem;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .form-content {
@@ -339,70 +276,119 @@ nav {
   font-size: 1.2rem;
   padding-bottom: 2rem;
 }
-/* Media Queries  */
 
-@media (min-width: 470px) {
-  .logo {
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+  }
+
+  .hamburger.active {
+    position: fixed;
+    top: 35px;
+    right: 35px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(225deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-225deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    height: 100vh;
+    justify-content: center;
+    gap: 60px;
+    flex-direction: column;
+    background-color: #222;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  nav-item {
+    margin: 16px;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu.active .nav-item {
     height: 50px;
   }
 
-  .banner-container {
-    margin-top: 40vh;
+  .nav-branding {
+    /* border: 1px solid #fff; */
+    margin-top: 25px;
+  }
+  #logo {
+    width: 150px;
   }
 
-  .contact-container {
-    padding: 2rem;
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .banner-line_1 {
+    font-size: 4rem;
   }
 
-  .contact-form {
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-  }
-
-  .fa-brands {
+  .banner-line_2 {
     font-size: 3rem;
+    letter-spacing: 10px;
   }
 }
 
-@media (min-width: 768px) {
-  .logo-box {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 30%;
-  }
-
-  .logo {
-    height: 70px;
-  }
-
-  .banner-container {
-    margin-top: 50vh;
-  }
-}
-
-@media (min-width: 1024px) {
-  .nav-links a {
-    font-size: 18px;
+@media (min-width: 1025px) {
+  .nav-branding {
+    margin-top: 30px;
+    margin-left: 50px;
   }
 
   .banner-line_1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
+
   .banner-line_2 {
+    font-size: 3rem;
+    letter-spacing: 10px;
+  }
+
+  .about-container,
+  .experience-container,
+  .contact-container {
+    padding: 5rem 0;
+  }
+
+  .about-container h1,
+  .experience-container h1 {
+    font-size: 2rem;
+  }
+  .about-container h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .about-content,
+  .experience-content,
+  .course-list-container {
+    font-size: 1.5rem;
+  }
+
+  .fa-brands {
     font-size: 2.5rem;
-    letter-spacing: 7px;
-  }
-
-  .logo {
-    height: 100px;
-  }
-
-  .about-content {
-    font-size: 1.5rem;
-  }
-
-  .experience-content {
-    font-size: 1.5rem;
   }
 }

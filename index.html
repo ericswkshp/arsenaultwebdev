@@ -4,42 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eric Arsenault - Web Developer - Steling Heights, MI</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <link rel="shortcut icon" type="image/jpg" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo-box">
-          <img class="logo" src="./awd-logo-4.png" alt="Shop logo" />
-        </div>
-        <ul class="nav-links">
-          <li><a href="#index.html">Home</a></li>
-          <span class="pipe"> | </span>
-          <li><a href="#about-homepage">About</a></li>
-          <span class="pipe"> | </span>
-          <li><a href="#experience">Experience</a></li>
-          <span class="pipe"> | </span>
-          <li><a href="#contact">Contact</a></li>
+      <nav class="navbar">
+        <a href="#" class="nav-branding">
+          <img
+            src="img/awd-logo-4.png"
+            alt="Arsenault Web Development Logo"
+            id="logo"
+          />
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
         </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </nav>
     </header>
 
+    <!-- ********************* -->
     <section class="banner">
       <div class="banner-container">
         <div class="banner-line_1">I am Eric Arsenault</div>
@@ -165,6 +180,6 @@
         </p>
       </div>
     </footer>
-    <script src="main.js" defer></script>
+    <script src="script.js"></script>
   </body>
 </html>
